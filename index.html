@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Login</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				text-align: center;
+			}
+			html, body {
+			    width: 100%;
+			    height: 110%;
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			}
+			label{
+				text-align: left;
+			}
+			#start,.login{
+			    text-align: left;
+			    top: 32vh;
+			    width: 400px;
+			    margin: auto;
+			    padding: 40px;
+			    display: flex;
+			    position: relative;
+			    transform: translateY(-50%);
+			    flex-direction: column;
+			    background-color: #fff;
+			    border-radius: 4px;
+			}
+			.btn-login{
+				display: block;
+				width: 100%;
+				color: #fff;
+			    padding: 12px 0;
+			    font-size: 16px;
+			    margin: 0 auto;
+			    margin-top: 12px;
+			    -webkit-box-shadow: none;
+			    box-shadow: none;
+			    letter-spacing: 0.2rem;
+			    background-color: #23283D;
+			    outline: none;
+			    -webkit-box-sizing: border-box;
+			    box-sizing: border-box;
+			    font-weight: 500;
+			    text-decoration: none;
+			    border: 0;
+			    border-radius: 4px;
+			    cursor: pointer;
+			}
+			.name-over{
+		        margin: 0;
+		        border: 0;
+		        margin-bottom: 18px;
+		        display: inline-flex;
+		        padding: 0;
+		        position: relative;
+		        min-width: 0;
+		        flex-direction: column;
+		        vertical-align: top;
+			}
+			.mouse {
+				width: 115px;
+				height: 120px;
+				position: absolute;
+				top: 10px;
+				animation: mousecreate 0.1s linear;
+			}
+			.head{
+		        color: #262626;
+		        margin: 0;
+		        font-size: 24px;
+		        text-align: center;
+		        font-weight: 500;
+		        margin-bottom: 10px;
+			}
+			.input{
+			    font: inherit;
+                width: 100%;
+                color: currentColor;
+                border: 0;
+                margin: 0;
+                padding: 6px 0 7px;
+                display: block;
+                min-width: 0;
+                box-sizing: content-box;
+                background: none;
+                -webkit-tap-highlight-color: transparent;
+                outline: none;
+            }
+			.box:before{
+			    left: 0;
+                right: 0;
+                bottom: 0;
+                font-size: 1px;
+                content: "\00a0";
+                position: absolute;
+                transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                border-bottom: 1px solid rgba(0, 0, 0, 1);
+                pointer-events: none;
+			}
+			.box{
+				margin-top: 5px;
+	            position: relative;
+	            line-height: 20px;
+	            color: rgba(0, 0, 0, 0.87);
+	            cursor: text;
+	            display: inline-flex;
+	            font-size: 16px;
+	            font-family: inherit;
+	            align-items: center;
+			}
+			@keyframes mousecreate {
+				0% {
+					top: 70px;
+				}
+				100% {
+					top: 10px;
+				}
+			}
+		</style>
+		<!-- 新 Bootstrap4 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+		<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+		<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div id="login" class="login" >
+			<div align="center">
+				<h1 class="head" style="padding-top:100px;">登录</h1>
+			</div>
+				<div class="name-over">
+					<label for="username">账号：</label>
+					<div class="form-group box">
+						<input type="text" style="text-align: left;" class="input" id="username">
+					</div>
+					<label for="password">密码：</label>
+					<div class="form-group box" >
+						<input type="password" style="text-align: left;" class="input" id="password">
+					</div>
+					<input id="btn-login" class="btn-login" type="button" name="mystartBtn" onclick="login()" value="LOGIN">
+				</div>
+			
+		</div>
+		<div id="choose" class="login" style="display: none;">
+
+			<div class="name-over" >
+				<div align="center">
+					<h1  class="head" style="padding-top:100px;">打企鹅</h1>
+				</div>
+				<div class="container" >
+					<!-- <div class="name-over-pattern">
+						<p>模式简介：</p>
+						<p>经典游戏模式：可直接开始游戏娱乐</p>
+						<p>无尽游戏模式：关卡游戏，不同地鼠</p>
+					</div> -->
+				</div>
+				<input id="btn-choose-answer" class="btn-login" type="button" name="mystartBtn" onclick="wujinGame()" value=" 开始游戏 ">
+			</div>
+		</div>
+	</body>
+</html>
+<script src="./js/login.js"></script>
